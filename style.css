@@ -1,0 +1,115 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000000;
+}
+
+.container {
+  max-width: 350px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border: 1px solid #dbdbdb;
+}
+
+.logo {
+  width: 175px;
+  margin: 20px auto;
+}
+
+form input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 9px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background: #fafafa;
+}
+
+button {
+  width: 100%;
+  padding: 9px;
+  margin-top: 10px;
+  background: #3897f0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.divider {
+  margin: 20px 0;
+  position: relative;
+  color: #999;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #dbdbdb;
+  position: absolute;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.fb-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.fb-login img {
+  width: 18px;
+  margin-right: 8px;
+}
+
+.fb-login a {
+  font-weight: bold;
+  color: #385185;
+  text-decoration: none;
+}
+
+.forgot-link {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #00376b;
+  text-decoration: none;
+}
+
+.signup-box {
+  background: white;
+  padding: 20px;
+  border: 1px solid #dbdbdb;
+  margin-top: 10px;
+}
+
+.signup-box a {
+  color: #0095f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.get-app {
+  margin-top: 20px;
+}
+
+.app-links img {
+  width: 130px;
+  margin: 5px;
+}
